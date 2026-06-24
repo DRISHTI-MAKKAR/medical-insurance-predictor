@@ -4,3 +4,8 @@ numpy
 xgboost
 scikit-learn
 joblib
+openai    
+fastapi
+uvicorn
+groq
+python-dotenv
