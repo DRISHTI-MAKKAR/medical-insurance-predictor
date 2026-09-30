@@ -120,7 +120,7 @@ def ask_groq_ai(user_question, chat_history):
 
     # First call — Groq decides whether to call ML model
     response = groq_client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model = "openai/gpt-oss-20b",
         messages=messages,
         tools=tools,
         tool_choice="auto",
@@ -161,7 +161,7 @@ def ask_groq_ai(user_question, chat_history):
         })
 
         final_response = groq_client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model = "openai/gpt-oss-20b",
             messages=messages,
             max_tokens=1024
         )

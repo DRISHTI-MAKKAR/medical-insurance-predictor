@@ -1,11 +1,9 @@
 streamlit
 pandas
 numpy
-xgboost
+xgboost==3.0.5
+joblib==1.5.2
 scikit-learn
-joblib
-openai    
-fastapi
-uvicorn
 groq
+requests
 python-dotenv
