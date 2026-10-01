@@ -174,6 +174,25 @@ python-dotenv
 
 ---
 
+## 📓 ML Analysis Notebook (`Medical_Insurance_Cost_Prediction.ipynb`)
+
+The notebook contains the full academic ML pipeline behind the app:
+
+| Part | Algorithms | Metrics |
+|---|---|---|
+| Data pre-processing | Missing values, duplicate removal, range checks, IQR outliers, encoding, scaling, log-transform | — |
+| Regression (predict cost) | Linear Regression, Ridge, Random Forest, XGBoost (+ GridSearch tuning) | R², MAE, RMSE, MAPE, 5-fold CV |
+| Classification (high vs low cost) | Logistic Regression, KNN, SVM, Naive Bayes, Decision Tree, Random Forest, XGBoost | Accuracy, Precision, Recall, F1, ROC-AUC, confusion matrix, stratified CV |
+| Clustering (customer segments) | K-Means, Agglomerative (Ward), Gaussian Mixture + PCA | Silhouette, Davies-Bouldin, Calinski-Harabasz, ARI, purity |
+| Explainability | SHAP, feature importance, decision-tree plot | — |
+
+Best models exceed the **80 % accuracy** requirement (regression R² ≈ 0.90, classification accuracy ≈ 93–95 %).
+
+Run it in Google Colab (upload `insurance.csv`) or locally with `jupyter notebook` — extra packages: `matplotlib seaborn shap`.
+When run locally, the notebook saves its models to `notebook_outputs/`, so it never overwrites the model used by the app.
+
+---
+
 ## 🧠 ML Model Details
 
 The XGBoost model was trained with the following engineered features:
